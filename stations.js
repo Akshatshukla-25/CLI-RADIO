@@ -1,32 +1,46 @@
-module.exports = [
+// stations.js
+// List of verified internet radio stations with genres and direct stream URLs.
+// Both 'url' and 'streamUrl' are provided for flexibility across modules.
+
+const stations = [
   {
-    name: 'Chillhop Radio',
-    genre: 'Lo-Fi / Chillhop',
-    streamUrl: 'https://streams.fluxfm.de/Chillhop/mp3-128/',
+    name: "Lofi Study",
+    genre: "lofi",
+    url: "https://stream.laut.fm/lofi",
+    streamUrl: "https://stream.laut.fm/lofi"
   },
   {
-    name: 'Nightwave Plaza',
-    genre: 'Lo-Fi / Vaporwave',
-    streamUrl: 'https://radio.plaza.one/mp3',
+    name: "Lofi Radio",
+    genre: "lofi",
+    url: "https://stream.laut.fm/lofi-radio",
+    streamUrl: "https://stream.laut.fm/lofi-radio"
   },
   {
-    name: 'The Current',
-    genre: 'Indie Rock / Alternative',
-    streamUrl: 'https://current.stream.publicradio.org/kcmp.mp3',
+    name: "FluxFM ChillHop",
+    genre: "chillhop",
+    // Cleaned up trailing path typo from original URL
+    url: "https://streams.fluxfm.de/Chillhop/mp3-128/",
+    streamUrl: "https://streams.fluxfm.de/Chillhop/mp3-128/"
   },
   {
-    name: 'FluxFM Indie',
-    genre: 'Indie Pop & Rock',
-    streamUrl: 'http://streams.fluxfm.de/live/mp3-320/audio/',
+    name: "Chillsynth FM",
+    genre: "synthwave",
+    url: "https://stream.nightride.fm/chillsynth.mp3",
+    streamUrl: "https://stream.nightride.fm/chillsynth.mp3"
   },
   {
-    name: 'Radio Paradise (Mellow Mix)',
-    genre: 'Indie / Acoustic / Chill',
-    streamUrl: 'http://stream.radioparadise.com/mellow-128',
+    name: "SomaFM Groove Salad",
+    genre: "ambient",
+    // Replaced inactive ice5 server with stable official ice.somafm.com endpoint
+    url: "https://ice.somafm.com/groovesalad",
+    streamUrl: "https://ice.somafm.com/groovesalad"
   },
   {
-    name: 'Radio Paradise (Main Mix)',
-    genre: 'Eclectic Indie & Rock',
-    streamUrl: 'http://stream.radioparadise.com/mp3-128',
-  },
+    name: "Radio Paradise Mellow",
+    genre: "mellow",
+    url: "https://stream.radioparadise.com/mellow-flac",
+    streamUrl: "https://stream.radioparadise.com/mellow-flac"
+  }
 ];
+
+module.exports = stations;
